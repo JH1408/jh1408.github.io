@@ -17,6 +17,10 @@ body {
   --sandy: #c4ccd7;
 }
 
+button:focus {
+  outline: none;
+}
+
 /*Navigation*/
 header {
   position: fixed;
@@ -35,17 +39,12 @@ header {
   top: 0;
   width: 100%;
   z-index: 1;
-  transition: background-color 0.5s ease-out;
-   -webkit-transition: background-color 0.5s ease-out;
-   -moz-transition: background-color 0.5s ease-out;
-   -ms-transition: background-color 0.5s ease-out;
-   -o-transition: background-color 0.5s ease-out;
-   transition: padding 0.5s ease-out;
-    -webkit-transition: padding 0.5s ease-out;
-    -moz-transition: padding 0.5s ease-out;
-    -ms-transition: padding 0.5s ease-out;
-    -o-transition: padding 0.5s ease-out;
-  }
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
 
 #navbar.scroll {
   background-color: var(--mediumdarkblue);
@@ -79,13 +78,13 @@ li {
   padding-right: 60px;
 }
 
-a:hover, .active {
+.nav-link:hover, .active {
   border-bottom: 1.5px solid var(--gold);
-  transition: border 0.1s ease-out;
-    -webkit-transition: border 0.1s ease-out;
-    -moz-transition: border 0.1s ease-out;
-    -ms-transition: border 0.1s ease-out;
-    -o-transition: border 0.1s ease-out;
+  transition: border 0.3s ease-out;
+    -webkit-transition: border 0.3s ease-out;
+    -moz-transition: border 0.3s ease-out;
+    -ms-transition: border 0.3s ease-out;
+    -o-transition: border 0.3s ease-out;
 }
 
 .logo-container {
@@ -194,17 +193,15 @@ h1 {
   background-position: center;
   background-color: var(--lightblue);
   max-width: 100%;
-  padding-top: 30px;
-  padding-bottom: 100px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 30px 40px;
 }
 
 .heading {
   color: var(--darkblue);
+  font-family: 'Playfair Display', serif;
   text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 2.4rem;
+  font-weight: 100;
   padding-bottom: 20px;
   text-align: center;
   position: relative;
@@ -218,70 +215,84 @@ h1 {
   margin: 0 auto;
   left: 0;
   right: 0;
-  width: 150px;
+  width: 100px;
   background: var(--mediumdarkblue);
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-template-rows: repeat(2,1fr);
-  grid-column-gap: 1rem;
-  grid-row-gap: 5rem;
+.project-box {
+  color: var(--darkblue);
+  width: 95%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
 }
 
-.project-pic {
+.project-text {
+  padding: 0px 40px 0px 20px;
+}
+
+.project-text h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-text p {
+  font-weight: 300;
+}
+
+.techstack {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.project-text a {
+  background-color: var(--lightblue);
+  color: var(--mediumdarkblue);
+  border: 2px solid var(--mediumdarkblue);
+  font-size: 1.2rem;
   border-radius: 3px;
-  width: 500px;
-  transition: all 0.4s ease-out;
-    -webkit-transition: all 0.4s ease-out;
-    -moz-transition: all 0.4s ease-out;
-    -ms-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out;
+  padding: 8px 16px;
+  margin-right: 10px;
+  text-decoration: none;
 }
 
-.project-link:hover {
-  border: none;
+.project-text a:hover {
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
 }
 
-.project-link:hover .project-pic{
-  filter: brightness(40%);
+.project-img img {
+  width: 400px;
 }
 
-.project-link {
-  position: relative;
-}
-
-.project-link:hover .btn-visit {
-  cursor: pointer;
-  display: inline-block;
-}
-
-button {
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 4px;
-  bottom: 500%;
-  color: white;
-  display: none;
-  font-size: 1.1rem;
-  height: 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  position: absolute;
-  width: 120px;
-}
-
-.single-project {
+.more-projects {
   text-align: center;
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: var(--darkblue);
+  padding: 30px 0px;
 }
 
-figure {
-  position: relative;
+.more-projects a {
+  text-decoration: none;
+  color: var(--mediumdarkblue);
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
+.more-projects a:hover {
+  border-bottom: 1px solid var(--mediumdarkblue);
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+}
 
 /*Contact Section*/
 .contact-me-h2 {
@@ -335,7 +346,7 @@ textarea {
   background-color: var(--mediumdarkblue);
   border: 1px solid var(--mediumdarkblue);
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: 'Heebo';
   width:100px;
@@ -347,16 +358,23 @@ textarea {
 }
 
 .submit:hover {
-  background-color: var(--lightblue);
-  border: 1px solid var(--lightblue);
+  background-color: white;
+  border: 2px solid var(--mediumdarkblue);
+  color: var(--mediumdarkblue);
   cursor: pointer;
 }
 
 /*Footer*/
+footer {
+  background-color: var(--lightblue);
+  height: auto;
+  padding: 20px 0;
+}
 
 #footer{
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 #footer > li {
@@ -545,4 +563,6 @@ i {
       padding-left: 3px;
       padding-right: 3px;
     }
+
+
   }

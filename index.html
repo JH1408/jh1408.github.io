@@ -1,127 +1,183 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Josy Hartig | Web Developer</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:200,300,400,500" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  </head>
-  <body id="page-top" data-spy="scroll" data-target="#navbar" data-offset="50">
-    <header>
-      <div class="logo-container">
-        <a class="nav-link-logo" href="#page-top">
-          <img class="logo logo-big" src="./img/JH_Logo.png" alt="JH Logo">
-        </a>
-      </div>
-        <nav id="navbar">
-          <ul id="nav" class="nav section table-of-contents">
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#projects">Projects</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      <div class="navbar-icon">
-        <i class="fas fa-bars fa navbar-toggle"></i>
-      </div>
-    </header>
-    <main>
-      <section id="hero" class="section scrollspy">
-        <div class="intro" data-aos="fade-up">
-          <h1><span id="name">Josy Hartig</span><br>Full-Stack Web Developer</h1>
-        </div>
-      </section>
-      <section id="about" data-aos="fade-up" class="section scrollspy">
-        <h2 class="heading">About me</h2>
-        <div class="photo">
-          <img src="./img/JH_Photo.jpg" alt="Photo of me">
-        </div>
-        <div class="text">
-          <p>Hi, I'm Josy </p>
-        </div>
-      </section>
-      <div class="background"></div>
-      <section id="projects" class="section scrollspy">
-        <div class="project-title-div" data-aos="fade-up" >
-          <h2 class="heading">Recent Projects</h2>
-        </div>
-        <div class="project-grid">
-          <div class="single-project" data-aos="fade-up" >
-            <a class="project-link" href="https://rgfinance.nl" target="_blank">
-              <figure>
-                <img class="project-pic" src="Screenshot_2019-05-14 RG Finance Solutions.jpg" alt="RG Finance Solutions Photo">
-                <figcaption>
-                    <button class="btn-visit" type="button" name="button">Visit Website</button>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="single-project" data-aos="fade-up" >
-            <a class="project-link" href="https://UBlog--josyh.repl.co" target="_blank">
-              <figure>
-                <img class="project-pic"  src="Screenshot_2019-05-14 UBlog Instagram Academy.png" alt="UBlog Photo">
-                <figcaption>
-                    <button class="btn-visit" type="button" name="button">Visit Website</button>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="single-project" data-aos="fade-up" >
-            <a class="project-link" href="https://Technical-Documentation-Page--josyh.repl.co" target="_blank">
-              <figure>
-                <img class="project-pic"  src="Screenshot_2019-05-14 JavaScript Guide(1).png" alt="JavaScript Guide Photo">
-                <figcaption>
-                    <button class="btn-visit" type="button" name="button">Visit Website</button>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-          <div class="single-project" data-aos="fade-up" >
-            <a class="project-link" href="https://Survey-about-traveling--josyh.repl.co" target="_blank">
-              <figure>
-                <img class="project-pic"  src="Screenshot_2019-05-14 Traveling Survey.png" alt="Survey Photo">
-                <figcaption>
-                    <button class="btn-visit" type="button" name="button">Visit Website</button>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section id="contact" data-aos="fade-up" class="section scrollspy">
-        <div class="contact-me-div">
-          <h2 class="heading">Contact me</h2>
-          <p class="contact-me-p">Interested in working with me? Send me a message and I'll be in touch!</p>
-        </div>
-        <form class="contact-form" action="https://formcarry.com/s/cA2hNVb9QE4" method="POST" accept-charset="UTF-8">
-          <div class="input">
-            <input type="email" name="Email" placeholder="YOUR EMAIL" required>
-          </div>
-          <div class="input">
-            <textarea name="Message" rows="8" placeholder="YOUR MESSAGE" required></textarea>
-          </div>
-          <input type="hidden" name="_gotcha">
-          <div class="button">
-            <input class="submit" type="submit" value="Send">
-          </div>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <ul id="footer">
-        <li class="footer-item">&copy; 2019 Josy Hartig</li>
-        <li class="footer-item"><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="https://www.linkedin.com/in/josephine-hartig-22b074149"><i class="fab fa-linkedin-in"></i></a><a href="https://github.com/JH1408" target="_blank"><i class="fab fa-github"></i></a><a href="mailto:josy_hartig@yahoo.de?" target="_top"><i class="far fa-envelope"></i></a></li>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <title>Josy Hartig | Web Developer</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body id="page-top" data-spy="scroll" data-target="#navbar" data-offset="50">
+  <header>
+    <div class="logo-container">
+      <a class="nav-link-logo" href="#page-top">
+        <img class="logo logo-big" src="./img/JH_Logo.png" alt="JH Logo">
+      </a>
+    </div>
+    <nav id="navbar">
+      <ul id="nav" class="nav section table-of-contents">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-    </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="index.js" charset="utf-8"></script>
-  </body>
+    </nav>
+    <div class="navbar-icon">
+      <i class="fas fa-bars fa navbar-toggle"></i>
+    </div>
+  </header>
+  <main>
+    <section id="hero" class="section scrollspy">
+      <div class="intro" data-aos="fade-up">
+        <h1><span id="name">Josy Hartig</span><br>Full-Stack Web Developer</h1>
+      </div>
+    </section>
+    <section id="about" data-aos="fade-up" class="section scrollspy">
+      <h2 class="heading">About me</h2>
+      <div class="photo">
+        <img src="./img/JH_Photo.jpg" alt="Photo of me">
+      </div>
+      <div class="text">
+        <p>Hi, I'm Josy </p>
+      </div>
+    </section>
+    <div class="background"></div>
+    <section id="projects" class="section scrollspy">
+      <div class="project-title-div" data-aos="fade-up">
+        <h2 class="heading">Recent Projects</h2>
+      </div>
+      <div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./img/RG.png" alt="">
+          </div>
+          <div class="project-text">
+            <h3>RG Finance Solutions</h3>
+            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish cake
+              muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p class="techstack">HTML / CSS / jQuery</p>
+            <a href="https://rgfinance.nl" target="_blank" rel="noopener noreferrer">
+              Website
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-text">
+            <h3>Momentum Clone</h3>
+            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish
+              cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p class="techstack">HTML / CSS / JavaScript / Node / Express / EJS</p>
+            <a href="https://v9-toucans-team-05.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+              Website
+            </a>
+            <a href="https://github.com/chingu-voyages/v9-toucans-team-05" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </div>
+          <div class="project-img">
+            <img src="./img/Momentum_MacBook.png" alt="">
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./img/BookFinder.png" alt="">
+          </div>
+          <div class="project-text">
+            <h3>Book Finder</h3>
+            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish
+              cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p class="techstack">React (incl. React Redux & React Router) / Node / Express / MongoDB / JWT / CSS</p>
+            <a href="https://josy-book-finder.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+              Website
+            </a>
+            <a href="https://github.com/JH1408/Book-Finder" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-text">
+            <h3>Task App</h3>
+            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish
+              cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p class="techstack">Node / Express / MongoDB / EJS / JWT / jQuery / HTML / CSS</p>
+            <a href="https://josy-task-app.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+              Website
+            </a>
+            <a href="https://github.com/JH1408/Task-App" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </div>
+          <div class="project-img">
+            <img src="./img/TaskApp.png" alt="">
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./img/ProdLand.png" alt="">
+          </div>
+          <div class="project-text">
+            <h3>UBlog Landing Page</h3>
+            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop
+              danish cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p class="techstack">HTML / CSS / Vanilla JavaScript</p>
+            <a href="https://ublog--josyh.repl.co/" target="_blank" rel="noopener noreferrer">
+              Website
+            </a>
+            <a href="https://github.com/JH1408/Product-Landing-Page" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="more-projects">To see more projects, visit my <a href="https://github.com/JH1408">Github</a>.</p>
+    </section>
+    <section id="contact" data-aos="fade-up" class="section scrollspy">
+      <div class="contact-me-div">
+        <h2 class="heading">Contact me</h2>
+        <p class="contact-me-p">Interested in working with me? Send me a message and I'll be in touch!</p>
+      </div>
+      <form class="contact-form" action="https://formcarry.com/s/cA2hNVb9QE4" method="POST" accept-charset="UTF-8">
+        <div class="input">
+          <input type="email" name="Email" placeholder="YOUR EMAIL" required>
+        </div>
+        <div class="input">
+          <textarea name="Message" rows="8" placeholder="YOUR MESSAGE" required></textarea>
+        </div>
+        <input type="hidden" name="_gotcha">
+        <div class="button">
+          <input class="submit" type="submit" value="Send">
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <ul id="footer">
+      <li>
+        <a href="https://www.linkedin.com/in/josephine-hartig-22b074149"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/JH1408" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:josy_hartig@yahoo.de?" target="_top"><i class="far fa-envelope"></i></a>
+      </li>
+      <li class="footer-item">&copy; 2019 Josy Hartig</li>
+      <li class="footer-item">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="legal.html">Legal Notice</a>
+      </li>
+    </ul>
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
 </html>
