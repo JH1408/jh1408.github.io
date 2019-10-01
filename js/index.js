@@ -19,13 +19,24 @@
           $('.navbar-icon').click(function() {
           $('#navbar').slideToggle('slow');
           $('.nav').addClass('clicked');
+          if($('.overlay').css('visibility') == 'visible') {
+            $('.overlay').css('visibility', 'hidden');
+            $('body').css('overflow-y', 'auto');
+          } else {
+            $('.overlay').css('visibility', 'visible');
+            $('body').css('overflow-y', 'hidden');
+          }
         });
       });
 
 // Close Navbar on click on navlink
   $('.nav-link').click(function(){
     if (window.matchMedia("(max-width: 900px)").matches) {
-    $('#navbar').slideUp('slow');
+      setTimeout(function(){
+        $('#navbar').slideUp('slow');
+        $('.overlay').css('visibility', 'hidden');
+        $('body').css('overflow-y', 'auto');
+      }, 500);
   } else {
     $('#navbar').css('display', 'block');
   }
@@ -34,8 +45,11 @@
 // Close Navbar on click outside
   $(document).on('click touchstart', function(e) {
     if (window.matchMedia("(max-width: 900px)").matches){
-      if (!$('#navbar').is(e.target) && !$('.navbar-toggle').is(e.target) && !$('.nav').is(e.target)){
+      if (!$('#navbar').is(e.target) && !$('.navbar-toggle').is(e.target) && !$('.nav').is(e.target) && !$('.nav-link').is(e.target)){
     		$('#navbar').slideUp('slow');
+        $('.overlay').css('visibility', 'hidden');
+        $('body').css('overflow-y', 'auto');
+        console.log(e.target);
       }
     }
   	});
@@ -58,18 +72,3 @@ once: true,
 mirror: false,
 anchorPlacement: 'top-bottom',
 });
-
-// Scrollspy
-$(document).ready(function(){
-  $('.scrollspy').scrollSpy();
-});
-let _defaults = {
-  throttle: 100,
-  scrollOffset: 200, // offset - 200 allows elements near bottom of page to scroll
-  activeClass: 'active',
-  getActiveElement: function(id) {
-    return 'a[href="#' + id + '"]';
-  }
-};
-
-var instance = M.ScrollSpy.getInstance(elem);
