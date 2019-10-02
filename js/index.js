@@ -19,11 +19,11 @@
           $('.navbar-icon').click(function() {
           $('#navbar').slideToggle('slow');
           $('.nav').addClass('clicked');
-          if($('.overlay').css('visibility') == 'visible') {
-            $('.overlay').css('visibility', 'hidden');
+          if($('.overlay').css('opacity') == '0.5') {
+            $('.overlay').removeClass('visible');
             $('body').css('overflow-y', 'auto');
           } else {
-            $('.overlay').css('visibility', 'visible');
+            $('.overlay').addClass('visible');
             $('body').css('overflow-y', 'hidden');
           }
         });
@@ -34,7 +34,7 @@
     if (window.matchMedia("(max-width: 900px)").matches) {
       setTimeout(function(){
         $('#navbar').slideUp('slow');
-        $('.overlay').css('visibility', 'hidden');
+        $('.overlay').removeClass('visible');
         $('body').css('overflow-y', 'auto');
       }, 500);
   } else {
@@ -47,7 +47,7 @@
     if (window.matchMedia("(max-width: 900px)").matches){
       if (!$('#navbar').is(e.target) && !$('.navbar-toggle').is(e.target) && !$('.nav').is(e.target) && !$('.nav-link').is(e.target)){
     		$('#navbar').slideUp('slow');
-        $('.overlay').css('visibility', 'hidden');
+        $('.overlay').removeClass('visible');
         $('body').css('overflow-y', 'auto');
         console.log(e.target);
       }
