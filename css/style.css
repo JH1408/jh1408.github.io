@@ -153,7 +153,7 @@ li {
 /*Hero*/
 
 #hero {
-  background-image: url('../img/Hero_IMG.jpg');
+  background-image: url('../img/Hero_IMG_min.jpg');
   background-color: var(--mediumdarkblue);
   background-size: cover;
   color: white;
@@ -200,37 +200,14 @@ h1 {
 
 /*About Section*/
 
-#about {
+section {
   color: var(--darkblue);
   font-size: 1.3rem;
-  height: 500px;
+  height: auto;
   z-index: 0;
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.photo {
-  float: left;
-  padding-right: 20px;
-}
-
-.text {
-
-}
-
-.photo > img {
-  border-radius: 50%;
-  max-height: 150px;
-  max-width: 100%;
-}
-
-/*Project Section*/
-
-#projects {
-  background-color: var(--lightblue);
   padding: 30px 40px;
 }
+
 
 .heading {
   color: var(--darkblue);
@@ -255,16 +232,38 @@ h1 {
   background: var(--mediumdarkblue);
 }
 
+.photo {
+  float: left;
+  padding-right: 40px;
+}
+
+.text {
+  overflow: hidden;
+  font-weight: 300;
+}
+
+
+.photo > img {
+  border-radius: 50%;
+  max-height: 150px;
+  max-width: 100%;
+}
+
+/*Project Section*/
+
+#projects {
+  background-color: var(--lightblue);
+}
+
 .project-box {
   color: var(--darkblue);
   width: 95%;
   margin: 50px auto;
-  display: flex;
-  justify-content: space-around;
 }
 
 .project-text {
-  padding: 0px 40px 0px 20px;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .project-text h3 {
@@ -282,6 +281,10 @@ h1 {
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 30px;
+}
+
+.divider {
+  color: var(--mediumdarkblue);
 }
 
 .project-text a {
@@ -305,12 +308,21 @@ h1 {
   width: 400px;
 }
 
+.project-box:nth-child(even) .project-img{
+  float: right;
+  padding-left: 40px;
+}
+
+.project-box:nth-child(odd) .project-img{
+  float: left;
+  padding-right: 40px;
+}
+
 .more-projects {
   text-align: center;
   font-weight: 300;
   font-size: 1.4rem;
   color: var(--darkblue);
-  padding: 30px 0px;
 }
 
 .more-projects a {
@@ -331,15 +343,6 @@ h1 {
 }
 
 /*Contact Section*/
-.contact-me-h2 {
-  color: var(--darkblue);
-  font-size: 2rem;
-  font-weight: 400;
-  padding-top: 30px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .contact-me-p {
   color: var(--darkblue);
   font-size: 1rem;
@@ -548,7 +551,29 @@ i {
   }
 
   .project-box {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 70px auto;;
+  }
+
+  .project-box:first-of-type {
+    margin-top: 0;
+  }
+
+  .project-img {
+    float: none;
+  }
+
+  .project-text {
+    text-align: center;
+  }
+
+  .project-text p:first-of-type {
+    text-align: justify;
+  }
+
+  .techstack {
+    max-width: 95%;
   }
 }
