@@ -1,7 +1,14 @@
 
 // Make Navbar appear dark if scrolled
+let elementPosition = $('.fa-chevron-down').offset().top;
+
+if(window.matchMedia("(max-width: 600px)").matches) {
+  elementPosition = $('.intro').offset().top - ($(window).height() * 0.2);
+}
+
 $(window).scroll(() => {
-  if (this.scrollY >= 510) {
+  const yScrollPos = window.pageYOffset;
+  if (yScrollPos > elementPosition) {
     $('#navbar').addClass('scroll');
     $('header').addClass('scroll-header');
     $('navbar-icon').addClass('scroll-icon');
@@ -31,7 +38,7 @@ $(document).ready(() => {
 
 // Close Navbar on click on navlink
 $('.nav-link').click(() => {
-  if (window.matchMedia("(max-width: 900px)").matches) {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
     setTimeout(() => {
       $('#navbar').slideUp('slow');
       $('.overlay').removeClass('visible');
@@ -44,8 +51,8 @@ $('.nav-link').click(() => {
 
 // Close Navbar on click outside
 $(document).on('click touchstart', e => {
-  if (window.matchMedia("(max-width: 900px)").matches){
-    if (!$('#navbar').is(e.target) && !$('.navbar-toggle').is(e.target) && !$('.nav').is(e.target) && !$('.nav-link').is(e.target)){
+  if (window.matchMedia("(max-width: 1024px)").matches){
+    if (!$('#navbar').is(e.target) && !$('.navbar-toggle').is(e.target) && !$('.navbar-icon').is(e.target) && !$('.nav').is(e.target) && !$('.nav-link').is(e.target)){
   		$('#navbar').slideUp('slow');
       $('.overlay').removeClass('visible');
       $('body').css('overflow-y', 'auto');
@@ -74,7 +81,7 @@ AOS.init({
   disableMutationObserver: false,
   debounceDelay: 50,
   throttleDelay: 99,
-  offset: 100,
+  offset: 150,
   delay: 30,
   duration: 1000,
   easing: 'ease-in-out',
