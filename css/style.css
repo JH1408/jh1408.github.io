@@ -1,6 +1,9 @@
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Heebo', sans-serif;
-  font-size: 16px;
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -11,7 +14,7 @@ body {
 }
 
 * {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 :root {
@@ -74,15 +77,24 @@ header {
   transition: all 0.5s ease-out;
 }
 
+#navbar.scroll li {
+  font-size: 1.2rem;
+}
+
 .nav-link {
   color: inherit;
   text-decoration: none;
 }
 
 li {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   list-style: none;
   padding-right: 50px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .nav-link:hover, .active {
@@ -104,7 +116,7 @@ li {
 }
 
 .logo {
-  margin: 20px 0px 0px 50px;
+  margin: 20px 0px 0px 45px;
   transition: all 0.4s ease-out;
   -webkit-transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
@@ -113,7 +125,7 @@ li {
 }
 
 .logo-big {
-  height: 50px;
+  height: 60px;
 }
 
 .scroll-logo {
@@ -129,9 +141,12 @@ li {
 .navbar-icon {
   position: relative;
   top: 20px;
-  margin-left: 93%;
+  padding-right: 70px;
+  margin-left: auto;
   display: none;
   z-index: 3;
+  width: 30px;
+  height: auto;
 }
 
 .navbar-icon.scroll-icon {
@@ -144,14 +159,14 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -10;
   background-color: rgba(0,0,0,0);
   opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .visible {
@@ -163,7 +178,7 @@ li {
 /*Hero*/
 
 #hero {
-  background-image: url('../img/Hero_IMG_min.jpg');
+  background-image: url('../img/Hero_IMG_min.png');
   background-color: var(--mediumdarkblue);
   background-size: cover;
   color: white;
@@ -250,8 +265,8 @@ h1 {
 .text {
   overflow: hidden;
   font-weight: 300;
+  margin-bottom: 20px;
 }
-
 
 .photo > img {
   border-radius: 50%;
@@ -314,18 +329,26 @@ h1 {
   transition: all 0.4s ease 0s;
 }
 
+.project-img {
+  margin-top: 20px;
+}
+
 .project-img img {
   width: 400px;
 }
 
-.project-box:nth-child(even) .project-img{
+.project-box:nth-child(even) .project-img {
   float: right;
   padding-left: 40px;
 }
 
-.project-box:nth-child(odd) .project-img{
+.project-box:nth-child(odd) .project-img {
   float: left;
   padding-right: 40px;
+}
+
+.project-box:last-of-type {
+  margin-bottom: 50px;
 }
 
 .more-projects {
@@ -355,7 +378,8 @@ h1 {
 /*Contact Section*/
 .contact-me-p {
   color: var(--darkblue);
-  font-size: 1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
   padding-bottom: 20px;
   text-align: center;
 }
@@ -449,7 +473,7 @@ footer {
   color: var(--mediumdarkblue)
 }
 
-i {
+#footer i {
   font-size: 1.8rem;
   padding-right: 15px;
 }
@@ -570,11 +594,12 @@ i {
   }
 
   .project-box:first-of-type {
-    margin-top: 0;
+    margin-top: 50px;
   }
 
-  .project-img {
+  .project-box:nth-child(even) .project-img, .project-box:nth-child(odd) .project-img {
     float: none;
+    padding: 0;
   }
 
   .project-text {
@@ -585,7 +610,73 @@ i {
     text-align: justify;
   }
 
+  .project-img {
+    margin-top: 0;
+  }
+
   .techstack {
     max-width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  #footer {
+    padding: 0px 20px;
+  }
+
+  #footer i {
+    font-size: 16px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 14px;
+  }
+
+  .navbar-icon {
+    padding-right: 50px;
+  }
+
+  .logo {
+    margin-left: 25px;
+  }
+
+  .segment {
+    padding: 30px 20px;
+  }
+
+  .project-img img {
+    width: 300px;
+  }
+
+  .contact-me-p {
+    padding: 0px 20px 20px;
+  }
+
+  .photo {
+    float: none;
+    padding-right: 0;
+    margin: auto;
+    width: 100px;
+  }
+
+  .photo img {
+    height: 100px;
+  }
+
+  .text {
+    margin: 0 10px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 12px;
+  }
+
+  .project-img img {
+    width: 250px;
   }
 }
