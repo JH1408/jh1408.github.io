@@ -189,7 +189,7 @@ li {
   width: 100%;
   filter: blur(0.5);
   position: relative;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -695,5 +695,11 @@ footer {
 
   .nav li {
     font-size: 16px;
+  }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  #hero {
+    background-attachment: scroll;
   }
 }

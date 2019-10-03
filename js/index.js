@@ -17,16 +17,16 @@ $(window).scroll(() => {
 // Reveal Navbar on click for mobile devices
 $(document).ready(() => {
     $('.navbar-icon').click(() => {
-    $('#navbar').slideToggle('slow');
-    $('.nav').addClass('clicked');
-    if($('.overlay').css('opacity') == '0.5') {
-      $('.overlay').removeClass('visible');
-      $('body').css('overflow-y', 'auto');
-    } else {
-      $('.overlay').addClass('visible');
-      $('body').css('overflow-y', 'hidden');
-    }
-  });
+      $('#navbar').slideToggle('slow');
+      $('.nav').addClass('clicked');
+      if($('.overlay').css('opacity') == '0.5') {
+        $('.overlay').removeClass('visible');
+        $('body').css('overflow-y', 'auto');
+      } else {
+        $('.overlay').addClass('visible');
+        $('body').css('overflow-y', 'hidden');
+      }
+    });
 });
 
 // Close Navbar on click on navlink
