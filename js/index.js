@@ -64,20 +64,6 @@ $(document).ready(() => {
   }
 });
 
-// Hero img depending on screen size
-const changeHero = () => {
-  if (window.matchMedia("(max-width: 768px)").matches && window.matchMedia("(min-width: 451px)").matches){
-    $('#hero').removeClass('laptop').removeClass('phone').addClass('tablet');
-  } else if (window.matchMedia("(max-width: 450px)").matches) {
-    $('#hero').removeClass('laptop').removeClass('tablet').addClass('phone');
-  } else {
-    $('#hero').removeClass('phone').removeClass('tablet').addClass('laptop');
-  }
-};
-
-$(document).ready(changeHero);
-$(window).on('resize', changeHero);
-
 // FadeUp Option
 AOS.init({
   disable: false,

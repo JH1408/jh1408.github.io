@@ -178,6 +178,7 @@ li {
 /*Hero*/
 
 #hero {
+  background-image: url('../img/Hero_IMG_min.png');
   background-color: var(--mediumdarkblue);
   background-size: cover;
   color: white;
@@ -192,18 +193,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.laptop {
-  background-image: url('../img/Hero_IMG_min.png');
-}
-
-.tablet {
-  background-image: url('../img/Hero_IMG_min_tablet.png');
-}
-
-.phone {
-  background-image: url('../img/Hero_IMG_min_phone.png');
 }
 
 .intro {
@@ -631,6 +620,12 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  #hero {
+    background-image: url('../img/Hero_IMG_min_tablet.png');
+  }
+}
+
 @media (max-width: 600px) {
   #footer {
     padding: 0px 20px;
@@ -680,6 +675,12 @@ footer {
 
   .text {
     margin: 0 10px 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  #hero {
+    background-image: url('../img/Hero_IMG_min_phone.png');
   }
 }
 
