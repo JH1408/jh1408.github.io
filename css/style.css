@@ -178,7 +178,6 @@ li {
 /*Hero*/
 
 #hero {
-  background-image: url('../img/Hero_IMG_min.png');
   background-color: var(--mediumdarkblue);
   background-size: cover;
   color: white;
@@ -193,6 +192,18 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.laptop {
+  background-image: url('../img/Hero_IMG_min.png');
+}
+
+.tablet {
+  background-image: url('../img/Hero_IMG_min_tablet.png');
+}
+
+.phone {
+  background-image: url('../img/Hero_IMG_min_phone.png');
 }
 
 .intro {
@@ -215,6 +226,7 @@ h1 {
 
 .fa-chevron-down {
   color: var(--gold);
+  font-size: 30px;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -678,5 +690,9 @@ footer {
 
   .project-img img {
     width: 250px;
+  }
+
+  .nav li {
+    font-size: 16px;
   }
 }
