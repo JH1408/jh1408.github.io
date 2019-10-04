@@ -133,25 +133,92 @@ li {
   margin-top: 5px;
 }
 
-.navbar-toggle {
-  font-size: 25px;
-  color: var(--gold);
-}
+/* Hamburger Icon */
 
 .navbar-icon {
   position: relative;
   top: 20px;
-  padding-right: 70px;
   margin-left: auto;
+  padding-right: 70px;
   display: none;
   z-index: 3;
-  width: 30px;
+  width: 20px;
   height: auto;
 }
 
-.navbar-icon.scroll-icon {
-  margin-top: 5px;
+.navbar-toggle {
+  width: 30px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
+
+.navbar-toggle span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: var(--gold);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.navbar-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+.navbar-toggle span:nth-child(2),.navbar-toggle span:nth-child(3) {
+  top: 8px;
+}
+
+.navbar-toggle span:nth-child(4) {
+  top: 16px;
+}
+
+.navbar-toggle.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.navbar-toggle.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.navbar-toggle.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.navbar-toggle.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+/* Overlay */
 
 .overlay{
   position: absolute;
@@ -213,15 +280,34 @@ h1 {
   font-size: 1.1rem;
 }
 
-.fa-chevron-down {
+.chevron {
   color: var(--gold);
-  font-size: 30px;
   position: absolute;
   bottom: 20px;
   left: 50%;
   -moz-animation: bounce 3s infinite;
 	-webkit-animation: bounce 3s infinite;
 	animation: bounce 3s infinite;
+  cursor: pointer;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.2em 0.2em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.7em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.7em;
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
 }
 
 .segment {
@@ -261,18 +347,35 @@ h1 {
 .photo {
   float: left;
   padding-right: 40px;
-}
-
-.text {
-  overflow: hidden;
-  font-weight: 300;
-  margin-bottom: 20px;
+  padding-left: 10px;
 }
 
 .photo > img {
   border-radius: 50%;
   max-height: 150px;
   max-width: 100%;
+}
+
+.text {
+  overflow: hidden;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: justify;
+}
+
+.text p:first-of-type {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0px auto 10px;
+}
+
+.text p:nth-of-type(2) {
+  font-weight: 400;
+}
+
+.text span {
+  font-weight: 400;
 }
 
 /*Project Section*/
@@ -301,6 +404,7 @@ h1 {
 
 .project-text p {
   font-weight: 300;
+  text-align: justify;
 }
 
 .techstack {
@@ -569,21 +673,22 @@ footer {
   .scroll-header {
     background-color: var(--mediumdarkblue);
     height: 40px;
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(94,95,99,0.88);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(94,95,99,0.88);
+    box-shadow: 0px 3px 8px 0px rgba(94,95,99,0.88);
   }
 
   .scroll-header .navbar-toggle {
     position: relative;
     top: -10px;
-    -webkit-transition: all 0.4s ease-out;
-    -moz-transition: all 0.4s ease-out;
-    -ms-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
-
   }
 
   .nav li {
     padding-bottom: 10px;
+  }
+
+  .text {
+    margin-top: 0px;
   }
 
   .project-box {
@@ -594,7 +699,7 @@ footer {
   }
 
   .project-box:first-of-type {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .project-box:nth-child(even) .project-img, .project-box:nth-child(odd) .project-img {
@@ -626,6 +731,26 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .photo {
+    float: none;
+    padding-right: 0;
+    margin: 30px auto 0;
+    width: 100px;
+  }
+
+  .photo img {
+    height: 100px;
+  }
+
+  .text {
+    margin: 0 10px 20px;
+  }
+
+  .text p:first-of-type {
+    text-align: center;
+    margin-top: 10px;
+  }
+
   #footer {
     padding: 0px 20px;
   }
@@ -660,26 +785,37 @@ footer {
   .contact-me-p {
     padding: 0px 20px 20px;
   }
-
-  .photo {
-    float: none;
-    padding-right: 0;
-    margin: auto;
-    width: 100px;
-  }
-
-  .photo img {
-    height: 100px;
-  }
-
-  .text {
-    margin: 0 10px 20px;
-  }
 }
 
 @media (max-width: 450px) {
   #hero {
     background-image: url('../img/Hero_IMG_min_phone.png');
+  }
+
+  .navbar-toggle {
+    width: 20px;
+    height: 45px;
+  }
+
+  .navbar-toggle span {
+    height: 2px;
+  }
+
+  .navbar-toggle span:nth-child(1) {
+    top: 0px;
+  }
+
+  .navbar-toggle span:nth-child(2),.navbar-toggle span:nth-child(3) {
+    top: 6px;
+  }
+
+  .navbar-toggle span:nth-child(4) {
+    top: 12px;
+  }
+
+  .scroll-header .navbar-toggle {
+    position: relative;
+    top: -7px;
   }
 }
 

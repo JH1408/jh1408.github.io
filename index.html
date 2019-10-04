@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="Josy Hartig - full-stack web developer who builds responsive and beautiful websites to help companies scale up their businesses.">
   <meta name="author" content="Josy Hartig">
   <title>Josy Hartig | Web Developer</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" type="text/css" rel="stylesheet">
@@ -37,7 +37,12 @@
       </ul>
     </nav>
     <div class="navbar-icon">
-      <i class="fas fa-bars fa navbar-toggle"></i>
+      <div class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
   <div class="overlay"></div>
@@ -47,21 +52,25 @@
         <h1><span id="name">Josy Hartig</span><br>Full-Stack Web Developer</h1>
       </div>
       <div>
-        <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        <a href="#about"><span class="chevron bottom"></span></a>
       </div>
     </section>
-    <section id="about" data-aos="fade-up" class="section scrollspy segment">
+    <section id="about"class="section scrollspy segment">
       <h2 class="heading">About me</h2>
-      <div class="photo">
-        <img src="./img/JH_Photo.jpg" alt="Photo of Josy Hartig">
-      </div>
-      <div class="text">
-        <p>Hi, I'm Josy </p>
-        <p>Brownie tiramisu I love sweet roll. Cupcake I love lollipop halvah. Cotton candy soufflé muffin. I love pastry cookie cake bear claw soufflé croissant cake marzipan. Chocolate cake gingerbread lollipop gummi bears chocolate bar dragée. Marzipan icing pastry chocolate bar. Cheesecake chocolate bar lemon drops toffee I love. Sweet jujubes brownie cookie gummies cotton candy gummies. Candy canes jelly beans I love candy icing jelly candy. Gummies croissant chocolate bar carrot cake cheesecake candy canes sesame snaps danish cheesecake. Lemon drops brownie icing jelly beans chocolate cake I love. Cheesecake tart marshmallow. Jelly-o apple pie gingerbread cookie. Cake tart topping candy.</p>
+      <div data-aos="fade-up" >
+        <div class="photo">
+          <img src="./img/JH_Photo.jpg" alt="Photo of Josy Hartig">
+        </div>
+        <div class="text">
+          <p>Hi, I’m Josy,</p>
+          <p>a self-taught web developer who loves seeing visions come to life. I’m a detail-oriented, organized problem-solver, analytical thinker and perfectionist who builds responsive and functional websites. I help brands and companies scaling up their businesses with compelling websites.</p>
+          <p>Before I built beautiful websites, I was a pharmacist, counseling patients about their health. However, I’m a freedom and travel lover so I ultimately sought a career that let me live an independent life. After a 5-day introductory course about HTML and CSS I had found my new passion for coding.  So here I am now, creating powerful web applications.</p>
+          <p><span>Some more about me:</span> I’m a positive-thinking scuba diver, yogi, foodie and dog lover from Germany.</p>
+        </div>
       </div>
     </section>
     <section id="projects" class="section scrollspy segment">
-      <div class="project-title-div" data-aos="fade-up">
+      <div class="project-title-div">
         <h2 class="heading">Recent Projects</h2>
       </div>
       <div>
@@ -71,8 +80,7 @@
           </div>
           <div class="project-text">
             <h3>RG Finance Solutions</h3>
-            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish cake
-              muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p>The goal was to provide a responsive website to help build the brand RG Finance Solutions. It informs users about the services being offered and helps the company win clients with it's simple yet appealing and straight forward design.</p>
             <p class="techstack">HTML <span class="divider">/</span> CSS <span class="divider">/</span> jQuery</p>
             <a href="https://rgfinance.nl" target="_blank" rel="noopener noreferrer">
               Website
@@ -88,8 +96,7 @@
           </div>
           <div class="project-text">
             <h3>Momentum Clone</h3>
-            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish
-              cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p>This productivity app is a clone of the famous Momentum Chrome Extension. It was created during a Chingu Voyage in collaboration with 2 other developers. Each time the app is opened, a beautiful new image is displayed by using the Unsplash API and users are greeted with one inspirational quote per day. The app displays the time and weather at the current location as well as a 5 day forecast. Users can keep track of tasks with to-do lists and save important links.</p>
             <p class="techstack">HTML <span class="divider">/</span> CSS <span class="divider">/</span> JavaScript <span class="divider">/</span> Node <span class="divider">/</span> Express <span class="divider">/</span> EJS</p>
             <a href="https://v9-toucans-team-05.herokuapp.com/" target="_blank" rel="noopener noreferrer">
               Website
@@ -106,8 +113,7 @@
           </div>
           <div class="project-text">
             <h3>Book Finder</h3>
-            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish
-              cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p>The Book Finder App lets users search for books using the Google Books API. An infinite scroll keeps pulling more search results. After creating a user account favorite books can be saved to a list. The app is responsive across screen sizes.</p>
             <p class="techstack">React (incl. React Redux & React Router) <span class="divider">/</span> Node <span class="divider">/</span> Express <span class="divider">/</span> MongoDB <span class="divider">/</span> JWT <span class="divider">/</span> CSS</p>
             <a href="https://josy-book-finder.herokuapp.com/" target="_blank" rel="noopener noreferrer">
               Website
@@ -123,8 +129,7 @@
           </div>
           <div class="project-text">
             <h3>Task App</h3>
-            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop danish
-              cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p>The Task App is a simple to-do list app. It has a clean and modern design. Create a user account and start keeping track of your tasks. Cross your tasks off the list when you're done or delete them. See all your tasks, only completed or only uncompleted ones. The app is responsive across screen sizes.</p>
             <p class="techstack">Node <span class="divider">/</span> Express <span class="divider">/</span> MongoDB <span class="divider">/</span> EJS <span class="divider">/</span> JWT <span class="divider">/</span> jQuery <span class="divider">/</span> HTML <span class="divider">/</span> CSS</p>
             <a href="https://josy-task-app.herokuapp.com/" target="_blank" rel="noopener noreferrer">
               Website
@@ -141,8 +146,7 @@
           </div>
           <div class="project-text">
             <h3>UBlog Landing Page</h3>
-            <p>Candy soufflé jujubes. Chocolate bar danish wafer caramels pastry tiramisu muffin gingerbread. Tart gummi bears tootsie roll. Lemon drops caramels gummies. Donut cupcake tiramisu muffin pie cake. Bear claw cupcake lollipop
-              danish cake muffin. Jelly beans ice cream ice cream donut toffee. Jelly beans ice cream marshmallow tootsie roll lemon drops oat cake danish powder.</p>
+            <p>This is a landing page created for a fictional brand called UBlog. It has a clear call-to-action, outlines the services of the brand and provides a contact form to get in touch with the team. This website is responsive across all screen sizes.</p>
             <p class="techstack">HTML <span class="divider">/</span> CSS <span class="divider">/</span> Vanilla JavaScript</p>
             <a href="https://ublog--josyh.repl.co/" target="_blank" rel="noopener noreferrer">
               Website
@@ -153,14 +157,14 @@
           </div>
         </div>
       </div>
-      <p class="more-projects">To see more projects, visit my <a href="https://github.com/JH1408">Github</a>.</p>
+      <p class="more-projects" data-aos="fade-up">To see more projects, visit my <a href="https://github.com/JH1408">Github</a>.</p>
     </section>
-    <section id="contact" data-aos="fade-up" class="section scrollspy segment">
+    <section id="contact" class="section scrollspy segment">
       <div class="contact-me-div">
         <h2 class="heading">Contact me</h2>
-        <p class="contact-me-p">Interested in working with me? Send me a message and I'll be in touch!</p>
+        <p class="contact-me-p" data-aos="fade-up">Interested in working with me? Send me a message and I'll be in touch!</p>
       </div>
-      <form class="contact-form" action="https://formcarry.com/s/cA2hNVb9QE4" method="POST" accept-charset="UTF-8">
+      <form class="contact-form" action="https://formcarry.com/s/cA2hNVb9QE4" method="POST" accept-charset="UTF-8" data-aos="fade-up">
         <div class="input">
           <input type="email" name="Email" placeholder="YOUR EMAIL" required>
         </div>

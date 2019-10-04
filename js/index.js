@@ -1,9 +1,9 @@
 
 // Make Navbar appear dark if scrolled
-let elementPosition = $('.fa-chevron-down').offset().top;
+let elementPosition = $('.chevron').offset().top;
 
 if(window.matchMedia("(max-width: 600px)").matches) {
-  elementPosition = $('.intro').offset().top - ($(window).height() * 0.2);
+  elementPosition = $('.intro').offset().top - ($(window).height() * 0.25);
 }
 
 $(window).scroll(() => {
@@ -25,7 +25,7 @@ $(window).scroll(() => {
 $(document).ready(() => {
     $('.navbar-icon').click(() => {
       $('#navbar').slideToggle('slow');
-      $('.nav').addClass('clicked');
+      $('.navbar-toggle').toggleClass('open');
       if($('.overlay').css('opacity') == '0.5') {
         $('.overlay').removeClass('visible');
         $('body').css('overflow-y', 'auto');
@@ -52,10 +52,11 @@ $('.nav-link').click(() => {
 // Close Navbar on click outside
 $(document).on('click touchstart', e => {
   if (window.matchMedia("(max-width: 1024px)").matches){
-    if (!$('#navbar').is(e.target) && !$('.navbar-toggle').is(e.target) && !$('.navbar-icon').is(e.target) && !$('.nav').is(e.target) && !$('.nav-link').is(e.target)){
-  		$('#navbar').slideUp('slow');
+    if (!$('#navbar').is(e.target) && !$('.navbar-toggle').is(e.target) && !$('.navbar-toggle span').is(e.target) && !$('.navbar-icon').is(e.target) && !$('.nav').is(e.target) && !$('.nav-link').is(e.target)){
+      $('#navbar').slideUp('slow');
       $('.overlay').removeClass('visible');
       $('body').css('overflow-y', 'auto');
+      $('.navbar-toggle').removeClass('open');
     }
   }
 });
@@ -81,7 +82,7 @@ AOS.init({
   disableMutationObserver: false,
   debounceDelay: 50,
   throttleDelay: 99,
-  offset: 150,
+  offset: 50,
   delay: 30,
   duration: 1000,
   easing: 'ease-in-out',
