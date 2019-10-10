@@ -613,6 +613,39 @@ footer {
   background: var(--mediumdarkblue);
 }
 
+.additional-pages h3 {
+  font-weight: 400;
+  margin: 25px auto 10px;
+}
+
+.additional-pages h4 {
+  font-weight: 400;
+  margin: 15px auto 10px;
+}
+
+.additional-pages p {
+  font-weight: 300;
+  margin: 0;
+}
+
+.additional-pages p:first-of-type {
+  margin-bottom: 15px;
+}
+
+.additional-pages p:last-of-type {
+  margin-bottom: 25px;
+}
+
+.additional-pages a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.additional-pages a:hover {
+  color: var(--mediumdarkblue);
+}
+
 /* Animation */
 @-moz-keyframes bounce {
   0% {
