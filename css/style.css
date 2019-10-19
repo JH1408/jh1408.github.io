@@ -623,6 +623,22 @@ footer {
   margin: 15px auto 10px;
 }
 
+.additional-pages h5 {
+  font-weight: 400;
+  font-style: italic;
+  margin: 15px auto;
+}
+
+.additional-pages li {
+  font-size: 1rem;
+  font-weight: 300;
+  list-style: unset;
+}
+
+.additional-pages span {
+  font-weight: 400;
+}
+
 .additional-pages p {
   font-weight: 300;
   margin: 0;
@@ -644,22 +660,6 @@ footer {
 
 .additional-pages a:hover {
   color: var(--mediumdarkblue);
-}
-
-.additional-pages h5 {
-  font-weight: 400;
-  font-style: italic;
-  margin: 15px auto;
-}
-
-.additional-pages li {
-  font-size: 1rem;
-  font-weight: 300;
-  list-style: unset;
-}
-
-.additional-pages span {
-  font-weight: 400;
 }
 
 /* Animation */
