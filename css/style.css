@@ -916,12 +916,21 @@ footer {
     font-size: 12px;
   }
 
+  .nav li {
+    font-size: 16px;
+  }
+
+  .heading::after {
+    top: 45px;
+  }
+
   .project-img img {
     width: 250px;
   }
 
-  .nav li {
-    font-size: 16px;
+  .additional-pages h2:after {
+    top: 45px;
+    width: 70px;
   }
 }
 
